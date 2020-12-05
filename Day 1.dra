@@ -4,10 +4,10 @@ For1:
 	HIA R2,a(R1)
 	HIA.w R3,0
 for2:	
-	VGL R3,200
+	VGL.w R3,200
 	VSP GRG,endfor2
 	HIA R4,a(R3)
-	HIA.w R5,R2
+	HIA R5,R2
 	OPT   R5,R4
 if:	
 	VGL R5,R6
@@ -19,9 +19,9 @@ endfor2:
 	OPT.w R1,1
 	SPR for1
 
-end:	HIA.w	R0,R2
+end:	HIA	R0,R2
 	DRU
-	HIA.w	R0,R4
+	HIA	R0,R4
 	DRU
 	VER	R0,R2
 	DRU
