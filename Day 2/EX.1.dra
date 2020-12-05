@@ -1,0 +1,50 @@
+main:	HIA.w	R1,1
+	HIA.w	R2,0
+	HIA.w	R4,0
+	HIA.w	R6,0
+	HIA.w	R8,0
+	HIA.w	R9,0
+	LEZ
+	HIA	R7,R0
+first:	VGL	R8,R7
+	VSP	GEL,effor
+	HIA	R0,stringList(R2)
+	HIA	R3,stringList(+R2)
+
+for:	VGL.w 	R3,0
+	VSP	GEL,efor
+	HIA	R3,StringList(R2)
+if:	VGL	R0,R3
+	VSP	NGEL,endif
+	OPT.w	R4,1
+
+endif:	OPT.w	R2,1
+	SPR	for
+	
+
+	
+
+efor:	VGL	R4,value1.1(R9)
+	VSP	KL,else
+	VGL	R4,value1.2(R9)
+	VSP	GR,else
+	OPT.w	R6,1
+
+
+else:	HIA.w	R9,1
+	HIA.w	R4,0
+	OPT.w	R8,1
+	SPR	first
+
+effor:	HIA	R0,R6
+	DRU
+	STP
+
+
+
+
+stringList: "s  s  v  s  s  s  s  z  s  l  p  s  p  "; "n  g  n  c  n  "
+Value1.1: 6;3
+Value1.2: 8;4
+
+EINDPR
