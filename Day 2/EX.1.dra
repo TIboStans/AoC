@@ -31,7 +31,7 @@ efor:	VGL	R4,value1.1(R9)
 	OPT.w	R6,1
 
 
-else:	HIA.w	R9,1
+else:	OPT.w	R9,1
 	HIA.w	R4,0
 	OPT.w	R8,1
 	SPR	first
@@ -43,8 +43,12 @@ effor:	HIA	R0,R6
 
 
 
-stringList: "s  s  v  s  s  s  s  z  s  l  p  s  p  "; "n  g  n  c  n  "
-Value1.1: 6;3
-Value1.2: 8;4
+stringList: "s  s  v  s  s  s  s  z  s  l  p  s  p  "; "n  g  n  c  n  ";"v  v  k  v  m  v  d  m  v  h  t  t  v  v  r  g  v  v  w  v  ";"j  j  j  j  j  j  j  j  j  j  j  j  j  j  j  j  j  j  f  "
+
+
+
+
+Value1.1: 6;3;4;16
+Value1.2: 8;4;8;18
 
 EINDPR
